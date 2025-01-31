@@ -110,11 +110,11 @@ for i, column in enumerate(columns_to_analyze):
 st.write("Wszystkie powyższe p są bardzo niskie, co oznacza zależność ze zmienną decyzyjną")
 st.write("Chi2 jest dość wysokie dla job i contact, bardzo wysokie dla poutcome i dość niskie dla marital. "
          "Czym większe chi2 tym większa zależność.")
-st.write("1. Studenci również byli najczęściej zainteresowani ofertą bankową, niż pozostałe zawody "
+st.write("1. Studenci byli częściej zainteresowani ofertą bankową, niż pozostałe zawody "
 "- ale może to wynikać z małej grupy badaweczej")
 st.write("2. Single byli częściej zainteresowani ofertą lokaty bankowej niż pozostałe grupy")
 st.write("3. Marketing kierowany na telefony komórkowy był skuteczniejszy niż na telefony stacjonarne")
-st.write("4. W przypadku sukcesu wcześniejszych reklam bankowych, aż 2x częściej udało się uzyskać go ponownie")
+st.write("4. W przypadku sukcesu wcześniejszych reklam bankowych, aż 2x częściej udało uzyskać się go ponownie")
 df.drop(columns=['pdays'], inplace=True)
 
 st.write("Dodatkowo obetniemy część wartości odstających w kolumnie campaign "
