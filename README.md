@@ -12,7 +12,7 @@
 6. import_data.py - punkt 2 wymagań - pozwala na łatwiejsze pobieranych danych z kaggle, ale również z dysku czy przy użyciu jobliba
 7. main.py - punkt 5 wymagań (ale składają się na niego również wszystkie podstrony) startowy plik streamlita - zawiera linki do podstron, oraz podstawowe ustawienia używane w całym projekcie
 8. models.py - punkt 6 wymagań - zawiera przetestowane modele uczenia maszynowego, ich metryki, model końcowy oraz krótki opis czemu akurat dany model został wybrany
-9. preprocessing.ipyngb - plik zawierający deklaracje transformera, pipelinenów, modeli końcowych. Uruchomienie go jest niezbędne by wygenerować pliki do folderu *data*
+9. preprocessing.ipyngb - plik zawierający deklaracje transformera, pipelinenów, modeli końcowych. Uruchomienie go jest niezbędne by wygenerować pliki do folderu *data*. Jednak dla łatwości użycia, pliki zostały zaimprotowane również do githuba
 10. processing.py - punkt 3 wymagań - choć tak naprawdę preprocessing jest realizowany w pliku powyżej, opisuje on jakie operacje zostały wykonane (Ważne: niektóre zostały wykonane już na etapie pliku *analysis.py*)
 11. raw_data.py - punkt 5 wymagań - plik strony głównej na streamlicie, zawiera on wykresy oraz opisy surowych danych, pozwala on na wgryzienie się w dane oraz na wyciągnięcie wstępnych wniosków niezbędnych do dalszej analizy
 
