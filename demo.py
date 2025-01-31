@@ -71,7 +71,7 @@ if 'formVisible' not in st.session_state:
 if 'resultVisible' not in st.session_state:
     st.session_state['resultVisible'] = False
 
-# Widok startowy z formularzem
+# Widok startowy z formularzem 
 if st.session_state['formVisible']:
     st.markdown("<i><h5>Wykorzystanie algorytmów uczenia maszynowego do analizy skuteczności reklamy bankowej.</h5></i>",
                 unsafe_allow_html=True)
