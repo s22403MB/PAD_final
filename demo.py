@@ -3,7 +3,7 @@ import pandas as pd
 import time
 import joblib
 
-
+# Funkcja do zmiany widoku w streamlicie, w pliku demo.py
 def get_predict():
     st.session_state['formVisible'] = False
     progress_text = "Operacja w toku. Proszę czekać."
@@ -15,7 +15,7 @@ def get_predict():
     my_bar.empty()
     st.session_state['resultVisible'] = True
 
-
+# Funkcja do zmapowania edukacji na wartości liczbowe
 def replace_education(value):
     mapping = {
         'illiterate': 0,
@@ -28,7 +28,7 @@ def replace_education(value):
     }
     return mapping.get(value, value)
 
-
+# Funkcja do predykcji dla przypadku testowego z demo.py
 def column_predictions(name, file, query):
     st.write(name)
     model = joblib.load(file)
@@ -52,7 +52,7 @@ def column_predictions(name, file, query):
     probability = round(model.predict_proba(query).max() * 100, 2)
     st.markdown(f"Przewidywane prawdopodobieństwo.: {probability}%</div>", unsafe_allow_html=True)
 
-
+# Funkcja do predykcji dla przypadku testowego z demo.py używająca VotingClassifiera
 def final_prediction(file, query):
     main_model = joblib.load(file)
     result = main_model.predict(query)[0]
@@ -71,6 +71,7 @@ if 'formVisible' not in st.session_state:
 if 'resultVisible' not in st.session_state:
     st.session_state['resultVisible'] = False
 
+# Widok startowy z formularzem
 if st.session_state['formVisible']:
     st.markdown("<i><h5>Wykorzystanie algorytmów uczenia maszynowego do analizy skuteczności reklamy bankowej.</h5></i>",
                 unsafe_allow_html=True)
@@ -107,6 +108,7 @@ if st.session_state['formVisible']:
 
     sendButton = st.button("Send!", on_click=get_predict)
 
+# Utworzenie query do predykcji, widok końcowy po wypełnieniu formularza
 if st.session_state['resultVisible']:
     query = pd.DataFrame({
         'age': [st.session_state['age']],
