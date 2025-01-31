@@ -1,7 +1,9 @@
 import streamlit as st
 
+# Ustawienie tytułu strony
 st.set_page_config(page_title="Analiza sukcesu reklamy bankowej", layout="wide")
 
+# Stworzenie podstron
 pages = {
     "Analiza sukcesu reklamy bankowej": [
         st.Page("raw_data.py", title="Surowe dane"),
@@ -16,7 +18,7 @@ pages = {
 pg = st.navigation(pages)
 pg.run()
 
-# footer
+# Ustawienie footera
 st.markdown("""
     <style>
         .footer {
