@@ -11,6 +11,7 @@ from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
 
 
+# Metoda do stworzenia macierzy pomyłek w ładniejszej formie
 def createMetrics(y_test, y_pred):
     cm = confusion_matrix(y_test, y_pred, labels=[1, 0])
 
@@ -37,13 +38,13 @@ def createMetrics(y_test, y_pred):
     st.pyplot(fig)
     st.dataframe(classification_report(y_test, y_pred, output_dict=True))
 
-
+# Pobranie danych do modeli oraz ich podział na zbiór treningowy i testowy
 X = import_df_local('data/02_processed.csv')
 Y = import_df_local('data/02a_Y.csv')
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.15, random_state=42)
 
+# Narysowanie 6 macierzy pomyłek oraz metryk w trzecgh kolumnach
 st.write("Poniżej porównanie kilku modeli uczenia maszynowego")
-
 models = {
     'DecisionTreeClassifier': DecisionTreeClassifier(max_depth=3, class_weight='balanced', random_state=42),
     'RandomForestClassifier': RandomForestClassifier(),
@@ -74,6 +75,7 @@ for i, (model_name, model) in enumerate(models.items()):
         y_pred = model.predict(X_test)
         createMetrics(y_test, y_pred)
 
+# Model końcowy, oraz podsumowanie
 col1, col2 = st.columns(2)
 with col1:
     st.header("Wybierając modele, które mylą się najrzadziej należałoby wybrać modele 2, 4 i 5.")
