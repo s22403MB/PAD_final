@@ -2,7 +2,7 @@ import streamlit as st
 import plotly.express as px
 from import_data import import_df
 
-
+# Plik zawierający wykresy dot. surowych danych
 st.header("Spójrzmy na surowe dane")
 df = import_df()
 st.write(df.head(15))
