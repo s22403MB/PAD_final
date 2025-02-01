@@ -111,9 +111,9 @@ st.write("Wszystkie powyższe p są bardzo niskie, co oznacza zależność ze zm
 st.write("Chi2 jest dość wysokie dla job i contact, bardzo wysokie dla poutcome i dość niskie dla marital. "
          "Czym większe chi2 tym większa zależność.")
 st.write("1. Studenci byli częściej zainteresowani ofertą bankową, niż pozostałe zawody "
-"- ale może to wynikać z małej grupy badaweczej")
+"- ale może to wynikać z małej grupy badawczej")
 st.write("2. Single byli częściej zainteresowani ofertą lokaty bankowej niż pozostałe grupy")
-st.write("3. Marketing kierowany na telefony komórkowy był skuteczniejszy niż na telefony stacjonarne")
+st.write("3. Marketing kierowany na telefony komórkowe był skuteczniejszy niż na telefony stacjonarne")
 st.write("4. W przypadku sukcesu wcześniejszych reklam bankowych, aż 2x częściej udało uzyskać się go ponownie")
 df.drop(columns=['pdays'], inplace=True)
 
