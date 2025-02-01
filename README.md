@@ -5,7 +5,7 @@
 
 # Struktura plików projektu składa się z:
 1. Folderu data - przechowywane są w nim pliki pośrednie na etapie analizy. Plik źródłowy jest pobierany w kodzie bezpośrednio z kaggle przy użyciu *kagglehub*.
-2. Folderu models - przechowywane w nim są modele wykorzystywane w pliku *demo.py* oraz podfolderu testing gdzie przechowywane są modele do pliku *models.py*.
+2. Folderu models - przechowywane są w nim modele wykorzystywane w pliku *demo.py* oraz podfolderu testing gdzie przechowywane są modele do pliku *models.py*.
 3. analysis.py - punkt 4 wymagań - analiza danych. Zawiera wykresy. dot najważniejszych kolumn, tabele krzyżowe dla danych kategorycznych oraz interpretacje badań.
 4. demo.py - plik pozwalający na przetestowanie formularza dot. danych ze zbioru i sprawdzenie czy marketing byłby w takim przypadku sukcesem.
 5. first_analysis.ipynb - plik w którym została przeprowadzona wstępna analiza zbioru, zawiera szczegółowe opisy transformacji oraz preprocessingu. (Warto jednak zaznaczyć, że nie wszystkie jego elementy zostały przeniesione do rozwiązania końcowego). Plik sam nie stanowi części projektu, ale jest wkładem który pozwolił na utworzenie reszty.
