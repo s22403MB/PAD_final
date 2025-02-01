@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from import_data import import_df_local, import_joblib
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier, GradientBoostingClassifier, AdaBoostClassifier
 from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
@@ -102,3 +102,19 @@ with col2:
         joblib.dump(model, 'models/testing/VotingClassifier.pkl')
     y_pred = model.predict(X_test)
     createMetrics(y_test, y_pred)
+
+try:
+    st.write("Poniżej graficzna reprezentacja sposóbu podejmowania decyzji przez Drzewo Decyzyjne")
+    model = import_joblib('models/testing/DecisionTreeClassifier.pkl')
+    fig, ax = plt.subplots(figsize=(20, 10))
+    class_names = list(map(str, model.classes_))
+
+    plot_tree(model,
+              feature_names=X_train.columns,
+              class_names=class_names,
+              filled=True,
+              ax=ax)
+
+    st.pyplot(fig)
+finally:
+    pass
