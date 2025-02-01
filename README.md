@@ -1,7 +1,7 @@
 # PAD_final - Aplikacja została wdrożona jako publiczna pod adresem https://pad-final.streamlit.app/
 
-## W moim projekcie skupiam się na analizie zbioru danych z https://www.kaggle.com/datasets/sahistapatel96/bankadditionalfullcsv zawierającego ponad 40 tys. rekordów dot. reklamy bankowej, a dokładniej lokaty. 
-## Moim celem będzie odnalezienie najoptymalniejszego modelu uczenia maszynowego, do polepszenia zysków banku. W tym celu sprawdzę również najistotniejsze cechy jakie mają wpływ na ten proces.
+## W moim projekcie skupiam się na analizie zbioru danych z https://www.kaggle.com/datasets/sahistapatel96/bankadditionalfullcsv zawierającego ponad 40 tys. rekordów dot. telefonicznej reklamy bankowej, a dokładniej lokaty. 
+## Moim celem będzie odnalezienie najoptymalniejszego modelu uczenia maszynowego, do zwiększenia zysków banku. W tym celu sprawdzę również najistotniejsze cechy jakie mają wpływ na ten proces.
 
 # Struktura plików projektu składa się z:
 1. Folderu data - przechowywane są w nim pliki pośrednie na etapie analizy. Plik źródłowy jest pobierany w kodzie bezpośrednio z kaggle przy użyciu *kagglehub*.
